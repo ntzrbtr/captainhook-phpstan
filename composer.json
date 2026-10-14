@@ -1,0 +1,37 @@
+{
+    "name": "ntzrbtr/captainhook-phpstan",
+    "description": "CaptainHook action that runs PHPStan on staged files covered by the project's PHPStan configuration",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["captainhook", "phpstan", "git", "hooks", "pre-commit", "static analysis"],
+    "authors": [
+        {
+            "name": "Thomas Off",
+            "email": "thomas.off@netzarbeiter.info"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "captainhook/captainhook": "^5.18"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^2.1",
+        "phpunit/phpunit": "^9.6"
+    },
+    "suggest": {
+        "phpstan/phpstan": "Required to actually run the analysis"
+    },
+    "autoload": {
+        "psr-4": {
+            "Netzarbeiter\\CaptainHookPhpstan\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Netzarbeiter\\CaptainHookPhpstan\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
